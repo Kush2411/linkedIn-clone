@@ -1,0 +1,12 @@
+import { IPostDocument } from "@/models/post.model";
+import { Post } from "./Post";
+
+export const Posts = ({ posts }: { posts: IPostDocument[] }) => {
+  return (
+    <div>
+      {posts.map((post) => {
+        return <Post key={post._id} post={post} />;
+      })}
+    </div>
+  );
+};
